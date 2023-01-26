@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(var(--bs-secondary), 1);
+}
+
 td:nth-child(3) {
   width: 25%;
 }
@@ -22,6 +26,20 @@ td:nth-child(3) {
 }
 .actions .btn[data-action=delete] {
   color: var(--bs-danger);
+}
+
+#taskActionsContainer .btn {
+  min-width: 7vw;
+  margin: 0 0 0 0.5rem;
+}
+#taskActionsContainer .btn.task-action {
+  min-width: 10vw;
+}
+#taskActionsContainer .btn.task-action[data-action=complete]::after {
+  content: " Complete";
+}
+#taskActionsContainer .btn.task-action[data-action=reopen]::after {
+  content: " Reopen";
 }
 
 /*# sourceMappingURL=tasktracker.task.css.map */
