@@ -18,7 +18,7 @@
 <body>
 <div class="vh-100 vw-100" id="content">
   <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-start h-50">
+    <div class="row d-flex justify-content-center align-items-start h-100">
       <div class="col-9">
         <div class="task-container card shadow mb-3">
           <div class="card-header">
@@ -96,6 +96,20 @@
             </div>
           </div>
         </div>
+
+        <form class="row justify-content-end" id="commentForm">
+          <div class="col-10">
+            <label class="visually-hidden" for="message">Comment</label>
+            <div class="input-group">
+              <div class="input-group-text"><i class="bi bi-chat"></i></div>
+              <input type="text" class="form-control" id="message" placeholder="New comment...">
+            </div>
+          </div>
+          <div class="col-2 d-grid">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i>&nbsp;Post</button>
+          </div>
+        </form>
+
       </div>
     </div>
   </div>
