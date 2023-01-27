@@ -51,4 +51,8 @@ td:nth-child(3) {
   content: " Reopen";
 }
 
+.comment-author {
+  flex-direction: row-reverse;
+}
+
 /*# sourceMappingURL=tasktracker.task.css.map */
