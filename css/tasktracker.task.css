@@ -28,6 +28,15 @@ td:nth-child(3) {
   color: var(--bs-danger);
 }
 
+.task-container {
+  position: relative;
+  max-height: 75vh;
+}
+
+.scroll-area {
+  overflow: auto;
+}
+
 #taskActionsContainer .btn {
   min-width: 7vw;
   margin: 0 0 0 0.5rem;
