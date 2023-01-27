@@ -43,8 +43,18 @@ const toggleTaskStatus = event => {
     toggleTaskStatusButton(event.target);
 }
 
+
+const handleSubmitComment = event => {
+    event.preventDefault();
+    event.stopPropagation();
+}
+
+
 const listActionButtons = document.querySelectorAll("#taskContainer .actions .btn.task-action");
 listActionButtons.forEach(btn => btn.addEventListener("click", handleTaskAction));
 
 const taskActionButton = document.querySelector("#taskActionsContainer .btn.task-action");
 if (taskActionButton) taskActionButton.addEventListener("click", toggleTaskStatus);
+
+const commentForm = document.getElementById("commentForm");
+if (commentForm) commentForm.addEventListener("submit", handleSubmitComment)
