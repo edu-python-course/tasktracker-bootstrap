@@ -42,6 +42,15 @@ td:nth-child(3) {
   }
 }
 
+.task-container {
+  position: relative;
+  max-height: 75vh;
+}
+
+.scroll-area {
+  overflow: auto;
+}
+
 #taskActionsContainer {
   .btn {
     min-width: 7vw;
