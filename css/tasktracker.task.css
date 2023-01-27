@@ -1,7 +1,3 @@
-body {
-  background-color: rgba(var(--bs-secondary), 1);
-}
-
 td:nth-child(3) {
   width: 25%;
 }
@@ -53,6 +49,17 @@ td:nth-child(3) {
 
 .comment-author {
   flex-direction: row-reverse;
+}
+.comment-author .author, .comment-author small {
+  text-align: end;
+}
+
+.comment img {
+  height: 64px;
+  width: auto;
+}
+.comment .author {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=tasktracker.task.css.map */
