@@ -1,5 +1,11 @@
-td:nth-child(3) {
-  width: 25%;
+.container {
+  padding-top: 5rem;
+}
+
+#taskList {
+  td:nth-child(3) {
+    width: 25%;
+  }
 }
 
 .task.task-completed {
@@ -68,6 +74,7 @@ td:nth-child(3) {
 
 .comment-author {
   flex-direction: row-reverse;
+
   .author, small {
     text-align: end;
   }
@@ -78,6 +85,7 @@ td:nth-child(3) {
     height: 64px;
     width: auto;
   }
+
   .author {
     text-decoration: underline;
   }

@@ -6,139 +6,170 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Bootstrap templates for a training todo web application">
-  <title>Task Tracker</title>
+  <title>Task List | Task Tracker</title>
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
   <link rel="manifest" href="../img/site.webmanifest">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="../css/tasktracker.task.min.css">
+  <link rel="stylesheet" href="../css/tasktracker.min.css">
 </head>
-<body>
-<div class="vh-100" id="content">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-start h-100">
-      <div class="col-8">
-
-        <div class="task-container card shadow">
-          <div class="card-header">
-            <h1 class="h1"><i class="bi bi-list-task"></i><span class="ms-2">Task List</span></h1>
-          </div>
-
-          <div class="card-body scroll-area" aria-label="Tasks Lists" data-mdb-perfect-scrollbar="true">
-            <table class="table">
-              <thead>
-              <tr>
-                <th scope="col">Assignee</th>
-                <th scope="col">Task Summary</th>
-                <th scope="col" class="d-none d-md-table-cell">Actions</th>
-              </tr>
-              </thead>
-              <tbody id="taskContainer">
-              <tr class="task" id="5cb84f9e-7b15-430b-ad15-d5c6f4ddbf6a">
-                <td class="align-middle">
-                  <img src="https://i.pravatar.cc/350?u=3ae8c8d8" alt="MN" class="rounded-circle"
-                       width="auto" height="42">
-                  <span class="ms-1">Meriadoc</span><span class="d-none d-lg-inline-block">&nbsp;Noakes</span>
-                </td>
-                <td class="summary align-middle">
-                  <a href="task_detail.html">tax put director maybe building</a>
-                </td>
-                <td class="actions align-middle d-none d-md-table-cell">
-                  <i class="task-action btn bi bi-check-lg disabled" role="button"
-                     data-target="5cb84f9e-7b15-430b-ad15-d5c6f4ddbf6a" data-action="complete"></i>
-                  <i class="task-action btn bi bi-trash disabled" role="button"
-                     data-target="5cb84f9e-7b15-430b-ad15-d5c6f4ddbf6a" data-action="delete"></i>
-                </td>
-              </tr>
-              <tr class="task task-completed" id="be17ad3f-72d0-42cc-909e-bec99c1f7134">
-                <td class="align-middle">
-                  <img src="https://i.pravatar.cc/350?u=25656cb3" alt="BT" class="rounded-circle"
-                       width="auto" height="42">
-                  <span class="ms-1">Berylla</span><span class="d-none d-lg-inline-block">&nbsp;Twofoot</span>
-                </td>
-                <td class="summary align-middle">
-                  <a href="task_detail.html">she hit federal first sister</a>
-                </td>
-                <td class="actions align-middle d-none d-md-table-cell">
-                  <i class="task-action btn bi bi-repeat" role="button"
-                     data-target="be17ad3f-72d0-42cc-909e-bec99c1f7134" data-action="reopen"></i>
-                  <i class="task-action btn bi bi-trash" role="button"
-                     data-target="be17ad3f-72d0-42cc-909e-bec99c1f7134" data-action="delete"></i>
-                </td>
-              </tr>
-              <tr class="task" id="32d2c9a0-fdfe-4174-81fe-eee632756e46">
-                <td class="align-middle">
-                  <img src="https://i.pravatar.cc/350?u=598da43b" alt="MB" class="rounded-circle"
-                       width="auto" height="42">
-                  <span class="ms-1">Marmadoc</span><span class="d-none d-lg-inline-block">&nbsp;Brockhouse</span>
-                </td>
-                <td class="summary align-middle">
-                  <a href="task_detail.html">future forward law rate exactly</a>
-                </td>
-                <td class="actions align-middle d-none d-md-table-cell">
-                  <i class="task-action btn bi bi-check-lg" role="button"
-                     data-target="32d2c9a0-fdfe-4174-81fe-eee632756e46" data-action="complete"></i>
-                  <i class="task-action btn bi bi-trash" role="button"
-                     data-target="32d2c9a0-fdfe-4174-81fe-eee632756e46" data-action="delete"></i>
-                </td>
-              </tr>
-              <tr class="task task-completed" id="c82d7d7c-d0a4-4b2a-b0ed-15005e376ce2">
-                <td class="align-middle">
-                  <img src="https://i.pravatar.cc/350?u=3251eaa5" alt="MC" class="rounded-circle"
-                       width="auto" height="42">
-                  <span class="ms-1">Malva</span><span class="d-none d-lg-inline-block">&nbsp;Chubb-Baggins</span>
-                </td>
-                <td class="summary align-middle">
-                  <a href="task_detail.html">growth world direction heart else</a>
-                </td>
-                <td class="actions align-middle d-none d-md-table-cell">
-                  <i class="task-action btn bi bi-repeat disabled" role="button"
-                     data-target="c82d7d7c-d0a4-4b2a-b0ed-15005e376ce2" data-action="reopen"></i>
-                  <i class="task-action btn bi bi-trash disabled" role="button"
-                     data-target="c82d7d7c-d0a4-4b2a-b0ed-15005e376ce2" data-action="delete"></i>
-                </td>
-              </tr>
-              <tr class="task" id="e35dbfa1-5567-4f02-bf1e-419d0efc696a">
-                <td class="align-middle">
-                  <img src="https://i.pravatar.cc/350?u=25656cb3" alt="BT" class="rounded-circle"
-                       width="auto" height="42">
-                  <span class="ms-1">Berylla</span><span class="d-none d-lg-inline-block">&nbsp;Twofoot</span>
-                </td>
-                <td class="summary align-middle">
-                  <a href="task_detail.html">professional southern everybody special campaign</a>
-                </td>
-                <td class="actions align-middle d-none d-md-table-cell">
-                  <i class="task-action btn bi bi-check-lg" role="button"
-                     data-target="e35dbfa1-5567-4f02-bf1e-419d0efc696a" data-action="complete"></i>
-                  <i class="task-action btn bi bi-trash" role="button"
-                     data-target="e35dbfa1-5567-4f02-bf1e-419d0efc696a" data-action="delete"></i>
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="card-footer">
-            <nav aria-label="Task list navigation">
-              <ul class="pagination justify-content-center align-middle">
-                <li class="page-item">
-                  <a href="" class="page-link disabled"><i class="bi bi-caret-left"></i></a>
-                </li>
-                <li class="page-item"><a href="" class="page-link active">1</a></li>
-                <li class="page-item"><a href="" class="page-link">2</a></li>
-                <li class="page-item"><a href="" class="page-link">3</a></li>
-                <li class="page-item"><a href="" class="page-link">4</a></li>
-                <li class="page-item"><a href="" class="page-link">5</a></li>
-                <li class="page-item">
-                  <a href="" class="page-link"><i class="bi bi-caret-right"></i></a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+<body class="">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+  <div class="container-fluid px-5">
+    <a href="" class="navbar-brand">
+      <img src="../img/favicon-32x32.png" alt="Task Tracker">
+      <span class="align-middle">Task Tracker</span>
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
+            aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a href="" class="nav-link">Sing In</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Sing Up</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Admin</a></li>
+        <li class="nav-item d-sm-inline-block d-lg-none"><a href="" class="nav-link">User Profile</a></li>
+        <li class="nav-item d-sm-inline-block d-lg-none"><a href="" class="nav-link">Create Task</a></li>
+        <li class="nav-item d-sm-inline-block d-lg-none"><a href="" class="nav-link">Logout</a></li>
+        <li class="nav-item dropdown d-none d-lg-inline-block">
+          <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://i.pravatar.cc/350?u=598da43b" alt="MB" class="rounded-circle"
+                 width="auto" height="32">
+            <span class="ms-1">Marmadoc Brockhouse</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="" class="dropdown-item">User Profile</a></li>
+            <li><a href="" class="dropdown-item">Create Task</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a href="" class="dropdown-item">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-start h-100">
+    <div class="col-8">
+      <div class="task-container card shadow">
+        <div class="card-header">
+          <h1 class="h1"><i class="bi bi-list-task"></i><span class="ms-2">Task List</span></h1>
         </div>
-
+        <div class="card-body scroll-area" aria-label="Tasks Lists">
+          <table class="table" id="taskList">
+            <thead>
+            <tr>
+              <th scope="col">Assignee</th>
+              <th scope="col">Task Summary</th>
+              <th scope="col" class="d-none d-md-table-cell">Actions</th>
+            </tr>
+            </thead>
+            <tbody id="taskContainer">
+            <tr class="task" id="5cb84f9e-7b15-430b-ad15-d5c6f4ddbf6a">
+              <td class="align-middle">
+                <img src="https://i.pravatar.cc/350?u=3ae8c8d8" alt="MN" class="rounded-circle"
+                     width="auto" height="42">
+                <span class="ms-1">Meriadoc</span><span class="d-none d-lg-inline-block">&nbsp;Noakes</span>
+              </td>
+              <td class="summary align-middle">
+                <a href="task_detail.html">tax put director maybe building</a>
+              </td>
+              <td class="actions align-middle d-none d-md-table-cell">
+                <i class="task-action btn bi bi-check-lg disabled" role="button"
+                   data-target="5cb84f9e-7b15-430b-ad15-d5c6f4ddbf6a" data-action="complete"></i>
+                <i class="task-action btn bi bi-trash disabled" role="button"
+                   data-target="5cb84f9e-7b15-430b-ad15-d5c6f4ddbf6a" data-action="delete"></i>
+              </td>
+            </tr>
+            <tr class="task task-completed" id="be17ad3f-72d0-42cc-909e-bec99c1f7134">
+              <td class="align-middle">
+                <img src="https://i.pravatar.cc/350?u=25656cb3" alt="BT" class="rounded-circle"
+                     width="auto" height="42">
+                <span class="ms-1">Berylla</span><span class="d-none d-lg-inline-block">&nbsp;Twofoot</span>
+              </td>
+              <td class="summary align-middle">
+                <a href="task_detail.html">she hit federal first sister</a>
+              </td>
+              <td class="actions align-middle d-none d-md-table-cell">
+                <i class="task-action btn bi bi-repeat" role="button"
+                   data-target="be17ad3f-72d0-42cc-909e-bec99c1f7134" data-action="reopen"></i>
+                <i class="task-action btn bi bi-trash" role="button"
+                   data-target="be17ad3f-72d0-42cc-909e-bec99c1f7134" data-action="delete"></i>
+              </td>
+            </tr>
+            <tr class="task" id="32d2c9a0-fdfe-4174-81fe-eee632756e46">
+              <td class="align-middle">
+                <img src="https://i.pravatar.cc/350?u=598da43b" alt="MB" class="rounded-circle"
+                     width="auto" height="42">
+                <span class="ms-1">Marmadoc</span><span class="d-none d-lg-inline-block">&nbsp;Brockhouse</span>
+              </td>
+              <td class="summary align-middle">
+                <a href="task_detail.html">future forward law rate exactly</a>
+              </td>
+              <td class="actions align-middle d-none d-md-table-cell">
+                <i class="task-action btn bi bi-check-lg" role="button"
+                   data-target="32d2c9a0-fdfe-4174-81fe-eee632756e46" data-action="complete"></i>
+                <i class="task-action btn bi bi-trash" role="button"
+                   data-target="32d2c9a0-fdfe-4174-81fe-eee632756e46" data-action="delete"></i>
+              </td>
+            </tr>
+            <tr class="task task-completed" id="c82d7d7c-d0a4-4b2a-b0ed-15005e376ce2">
+              <td class="align-middle">
+                <img src="https://i.pravatar.cc/350?u=3251eaa5" alt="MC" class="rounded-circle"
+                     width="auto" height="42">
+                <span class="ms-1">Malva</span><span class="d-none d-lg-inline-block">&nbsp;Chubb-Baggins</span>
+              </td>
+              <td class="summary align-middle">
+                <a href="task_detail.html">growth world direction heart else</a>
+              </td>
+              <td class="actions align-middle d-none d-md-table-cell">
+                <i class="task-action btn bi bi-repeat disabled" role="button"
+                   data-target="c82d7d7c-d0a4-4b2a-b0ed-15005e376ce2" data-action="reopen"></i>
+                <i class="task-action btn bi bi-trash disabled" role="button"
+                   data-target="c82d7d7c-d0a4-4b2a-b0ed-15005e376ce2" data-action="delete"></i>
+              </td>
+            </tr>
+            <tr class="task" id="e35dbfa1-5567-4f02-bf1e-419d0efc696a">
+              <td class="align-middle">
+                <img src="https://i.pravatar.cc/350?u=25656cb3" alt="BT" class="rounded-circle"
+                     width="auto" height="42">
+                <span class="ms-1">Berylla</span><span class="d-none d-lg-inline-block">&nbsp;Twofoot</span>
+              </td>
+              <td class="summary align-middle">
+                <a href="task_detail.html">professional southern everybody special campaign</a>
+              </td>
+              <td class="actions align-middle d-none d-md-table-cell">
+                <i class="task-action btn bi bi-check-lg" role="button"
+                   data-target="e35dbfa1-5567-4f02-bf1e-419d0efc696a" data-action="complete"></i>
+                <i class="task-action btn bi bi-trash" role="button"
+                   data-target="e35dbfa1-5567-4f02-bf1e-419d0efc696a" data-action="delete"></i>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <nav aria-label="Task list navigation">
+            <ul class="pagination justify-content-center align-middle">
+              <li class="page-item">
+                <a href="" class="page-link disabled"><i class="bi bi-caret-left"></i></a>
+              </li>
+              <li class="page-item"><a href="" class="page-link active">1</a></li>
+              <li class="page-item"><a href="" class="page-link">2</a></li>
+              <li class="page-item"><a href="" class="page-link">3</a></li>
+              <li class="page-item"><a href="" class="page-link">4</a></li>
+              <li class="page-item"><a href="" class="page-link">5</a></li>
+              <li class="page-item">
+                <a href="" class="page-link"><i class="bi bi-caret-right"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
