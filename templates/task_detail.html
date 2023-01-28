@@ -6,109 +6,144 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Bootstrap templates for a training todo web application">
-  <title>Task Tracker</title>
+  <title>Task Detail | Task Tracker</title>
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
   <link rel="manifest" href="../img/site.webmanifest">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="../css/tasktracker.task.min.css">
+  <link rel="stylesheet" href="../css/tasktracker.min.css">
 </head>
-<body class="bg-secondary bg-opacity-25">
-<div class="vh-100 vw-100" id="content">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-start h-100">
-      <div class="col-9">
-        <div class="card shadow mb-3" id="taskContainer">
-          <div class="card-header">
-            <h1 class="text-center">apply nor southern conference company</h1>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col">
-                  <div>
-                    <div class="d-inline-flex">Assignee:</div>
-                    <div class="d-inline-flex">
-                      Marmadoc&nbsp;<span class="d-none d-md-block">Brockhouse</span>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="d-inline-flex">Reporter:</div>
-                    <div class="d-inline-flex">
-                      Marmadoc&nbsp;<span class="d-none d-md-block">Brockhouse</span>
-                    </div>
+<body class="vh-100">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+  <div class="container-fluid px-5">
+    <a href="" class="navbar-brand">
+      <img src="../img/favicon-32x32.png" alt="Task Tracker">
+      <span class="align-middle">Task Tracker</span>
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
+            aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a href="" class="nav-link">Sing In</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Sing Up</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Admin</a></li>
+        <li class="nav-item d-sm-inline-block d-lg-none"><a href="" class="nav-link">User Profile</a></li>
+        <li class="nav-item d-sm-inline-block d-lg-none"><a href="" class="nav-link">Create Task</a></li>
+        <li class="nav-item d-sm-inline-block d-lg-none"><a href="" class="nav-link">Logout</a></li>
+        <li class="nav-item dropdown d-none d-lg-inline-block">
+          <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://i.pravatar.cc/350?u=598da43b" alt="MB" class="rounded-circle"
+                 width="auto" height="32">
+            <span class="ms-1">Marmadoc Brockhouse</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="" class="dropdown-item">User Profile</a></li>
+            <li><a href="" class="dropdown-item">Create Task</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a href="" class="dropdown-item">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container h-100">
+  <div class="row d-flex justify-content-center align-items-start h-100">
+    <div class="col-9">
+      <div class="card shadow mb-3" id="taskContainer">
+        <div class="card-header">
+          <h1 class="text-center">apply nor southern conference company</h1>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div>
+                  <div class="d-inline-flex">Assignee:</div>
+                  <div class="d-inline-flex">
+                    Marmadoc&nbsp;<span class="d-none d-md-block">Brockhouse</span>
                   </div>
                 </div>
-                <div class="col w-50">
-                  <div>
-                    <div class="d-inline-flex">Created:</div>
-                    <div class="d-inline-flex">
-                      <span>2023-01-03</span>
-                      <span>10:18:36</span>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="d-inline-flex">Updated:</div>
-                    <div class="d-inline-flex">
-                      <span>2023-01-16</span>
-                      <span>10:21:51</span>
-                    </div>
+                <div>
+                  <div class="d-inline-flex">Reporter:</div>
+                  <div class="d-inline-flex">
+                    Marmadoc&nbsp;<span class="d-none d-md-block">Brockhouse</span>
                   </div>
                 </div>
-
               </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p>Measure technology growth, maybe. Husband indeed bad Republican south under sound. This past marriage
-              result all how day miss. Film light beyond social behind onto. Walk attention war yet say.</p>
-          </div>
-          <div class="card-footer d-flex justify-content-end" id="taskActionsContainer">
-            <a href="" class="btn btn-danger" role="button"><i class="bi bi-trash"></i>&nbsp;Delete</a>
-            <a href="" class="btn btn-secondary" role="button"><i class="bi bi-pencil"></i>&nbsp;Edit</a>
-            <button href="" class="task-action btn btn-success bi bi-check-lg fw-normal" id="toggleTaskStatus"
-                    data-target="aae3e61a-021d-4cf4-a01c-f0a601006864" data-action="complete"></button>
-          </div>
-        </div>
-        <h2 class="mb-3">Comments</h2>
-        <div class="mb-3" id="commentsContainer">
-          <div class="comment-author comment d-flex mb-2">
-            <img src="https://i.pravatar.cc/350?u=598da43b" alt="MB" class="rounded-circle shadow mx-3">
-            <div class="col card shadow px-5 py-2">
-              <div class="author h5 mb-2">Marmadoc Brockhouse</div>
-              <small>Jan 24, 2023 17:30</small>
-              <p>
-                Where is the terrifying queen?
-              </p>
-            </div>
-          </div>
-          <div class="comment d-flex mb-2">
-            <img src="https://i.pravatar.cc/350?u=25656cb3" alt="BT" class="rounded-circle shadow mx-3">
-            <div class="card shadow px-5 py-2">
-              <div class="author h5 mb-2">Berylla Twofoot</div>
-              <small>Jan 24, 2023 17:30</small>
-              <p>
-                Green people wobble with hypnosis! Finally, indeed. When the captain harvests for nowhere, all
-                teleporters unite ordinary, carnivorous phenomenans.
-              </p>
+              <div class="col w-50">
+                <div>
+                  <div class="d-inline-flex">Created:</div>
+                  <div class="d-inline-flex">
+                    <span>2023-01-03</span>
+                    <span>10:18:36</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="d-inline-flex">Updated:</div>
+                  <div class="d-inline-flex">
+                    <span>2023-01-16</span>
+                    <span>10:21:51</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-
-        <form class="row justify-content-end fixed-bottom m-3" id="commentForm">
-          <div class="col-10">
-            <label class="visually-hidden" for="message">Comment</label>
-            <div class="input-group">
-              <div class="input-group-text"><i class="bi bi-chat"></i></div>
-              <input type="text" class="form-control" id="message" placeholder="New comment...">
-            </div>
-          </div>
-          <div class="col-2 d-grid">
-            <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i>&nbsp;Post</button>
-          </div>
-        </form>
-
+        <div class="card-body">
+          <p>Measure technology growth, maybe. Husband indeed bad Republican south under sound. This past marriage
+            result all how day miss. Film light beyond social behind onto. Walk attention war yet say.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-end" id="taskActionsContainer">
+          <a href="" class="btn btn-danger" role="button"><i class="bi bi-trash"></i>&nbsp;Delete</a>
+          <a href="" class="btn btn-secondary" role="button"><i class="bi bi-pencil"></i>&nbsp;Edit</a>
+          <button href="" class="task-action btn btn-success bi bi-check-lg fw-normal" id="toggleTaskStatus"
+                  data-target="aae3e61a-021d-4cf4-a01c-f0a601006864" data-action="complete"></button>
+        </div>
       </div>
+      <h2 class="mb-3">Comments</h2>
+      <div class="mb-3" id="commentsContainer">
+        <div class="comment-author comment d-flex mb-2">
+          <img src="https://i.pravatar.cc/350?u=598da43b" alt="MB" class="rounded-circle shadow mx-3">
+          <div class="col card shadow px-5 py-2">
+            <div class="author h5 mb-2">Marmadoc Brockhouse</div>
+            <small>Jan 24, 2023 17:30</small>
+            <p>
+              Where is the terrifying queen?
+            </p>
+          </div>
+        </div>
+        <div class="comment d-flex mb-2">
+          <img src="https://i.pravatar.cc/350?u=25656cb3" alt="BT" class="rounded-circle shadow mx-3">
+          <div class="card shadow px-5 py-2">
+            <div class="author h5 mb-2">Berylla Twofoot</div>
+            <small>Jan 24, 2023 17:30</small>
+            <p>
+              Green people wobble with hypnosis! Finally, indeed. When the captain harvests for nowhere, all
+              teleporters unite ordinary, carnivorous phenomenans.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <form class="row justify-content-end fixed-bottom m-3" id="commentForm">
+        <div class="col-10">
+          <label class="visually-hidden" for="message">Comment</label>
+          <div class="input-group">
+            <div class="input-group-text"><i class="bi bi-chat"></i></div>
+            <input type="text" class="form-control" id="message" placeholder="New comment...">
+          </div>
+        </div>
+        <div class="col-2 d-grid">
+          <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i>&nbsp;Post</button>
+        </div>
+      </form>
+
     </div>
   </div>
 </div>

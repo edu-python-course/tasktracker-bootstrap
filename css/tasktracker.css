@@ -1,4 +1,8 @@
-td:nth-child(3) {
+.container {
+  padding-top: 5rem;
+}
+
+#taskList td:nth-child(3) {
   width: 25%;
 }
 
@@ -62,4 +66,4 @@ td:nth-child(3) {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=tasktracker.task.css.map */
+/*# sourceMappingURL=tasktracker.css.map */
