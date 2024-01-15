@@ -35,7 +35,42 @@ module.exports = {
             templateParameters: {
                 title: "Tasks List",
             }
-        })
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/detail_view.hbs"),
+            filename: "tasks/task_detail.html",
+            templateParameters: {
+                title: "Tasks Details",
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/form_view.hbs"),
+            filename: "tasks/task_form.html",
+            templateParameters: {
+                title: "Task Form",
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/profile_view.hbs"),
+            filename: "users/profile.html",
+            templateParameters: {
+                title: "User Profile",
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/signup_view.hbs"),
+            filename: "auth/signup.html",
+            templateParameters: {
+                title: "Sign Up",
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/signin_view.hbs"),
+            filename: "auth/signin.html",
+            templateParameters: {
+                title: "Sign In",
+            }
+        }),
     ],
     module: {
         rules: [
