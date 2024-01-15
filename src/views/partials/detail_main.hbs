@@ -1,5 +1,5 @@
 <main class="col col-md-10 col-lg-9">
-  <div class="card shadow">
+  <div class="card shadow" id="taskDetailsContainer">
     <div class="card-header">
       <h1 class="card-title h3 text-center">{{summary}}</h1>
       <hr class="border">
@@ -19,6 +19,17 @@
         <div class="col">
           <strong class="me-1">Updated:</strong>
           <span>{{updated_at}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer" aria-label="TaskActions">
+      <div class="d-flex justify-content-end align-items-center">
+        <button class="btn btn-outline-success mx-3" data-task-target="{{pk}}" aria-label="complete">Complete</button>
+        <div class="btn-group" role="group">
+          <a href="{{FormView}}" class="btn btn-outline-primary" role="button">Update</a>
+          <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalTaskDelete">
+            Delete
+          </button>
         </div>
       </div>
     </div>

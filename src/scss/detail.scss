@@ -1,0 +1,25 @@
+// detail view stylesheet
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+#taskDetailsContainer {
+  > * {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  a,
+  .btn {
+    font-weight: bold;
+
+    @include media-breakpoint-up(sm) {
+      min-width: 5rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      min-width: 7.5rem;
+    }
+  }
+}
