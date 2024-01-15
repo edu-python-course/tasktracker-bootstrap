@@ -1,10 +1,12 @@
 <tr class="task" id="{{pk}}" data-task-completed="{{completed}}">
   <td class="align-middle" aria-label="TaskAssignee">
     <img src="{{assignee_image}}" alt="avatar" class="rounded-circle shadow avatar">
+    <br>
     <span class="d-none d-md-inline text-nowrap ms-2">{{assignee_first_name}} {{assignee_last_name}}</span>
   </td>
-  <td class="align-middle" aria-label="TaskReference">
-    <a href="">{{summary}}</a>
+  <td class="align-middle" aria-label="TaskDetails">
+    <a href="" class="text-decoration-none">{{summary}}</a>
+    <p class="text-muted">{{description}}</p>
   </td>
   <td class="align-middle" aria-label="TaskActions">
     <div class="d-flex flex-row justify-content-between align-items-center">
