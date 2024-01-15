@@ -3,7 +3,48 @@
     <div class="card-header d-flex flex-row justify-content-center">
       <h1 class="card-title h3 text-capitalize mx-auto my-2"><i class="bi bi-list-task"></i>&nbsp;task list</h1>
     </div>
-    <div class="card-body"></div>
+    <div class="card-body">
+      <table class="table">
+        <caption class="visually-hidden">task list</caption>
+        <thead>
+        <tr>
+          <th class="col col-3" scope="col">Assignee</th>
+          <th class="col col-8" scope="col">Task Summary</th>
+          <th class="col d-flex flex-row justify-content-center" scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody id="taskContainer">
+        {{! repeating tasks block }}
+        {{>list_task
+            pk="a76e9fac-f8ca-45ca-ae57-063459443ff0"
+            summary="Shield at the holodeck was the energy of assimilation, lowered to a chemical c-beam."
+            assignee_image="https://i.pravatar.cc/?u=DoraHeadstrong@dayrep.com"
+            assignee_first_name="Dora"
+            assignee_last_name="Headstrong"
+            completed=false
+            can_edit=false
+        }}
+        {{>list_task
+            pk="a76e9fac-f8ca-45ca-ae57-063459443ff0"
+            summary="Sensor at the universe was the pattern of love, empowered to a futile alien."
+            assignee_image="https://i.pravatar.cc/?u=PippinSackville-Baggins@jourrapide.com"
+            assignee_first_name="Pippin"
+            assignee_last_name="Sackville-Baggins"
+            completed=false
+            can_edit=true
+        }}
+        {{>list_task
+            pk="a76e9fac-f8ca-45ca-ae57-063459443ff0"
+            summary="Flight at the ready room was the vision of alignment, empowered to a quirky vogon."
+            assignee_image="https://i.pravatar.cc/?u=TobyMugwort@armyspy.com"
+            assignee_first_name="Toby"
+            assignee_last_name="Mugwort"
+            completed=true
+            can_edit=true
+        }}
+        </tbody>
+      </table>
+    </div>
     <div class="card-footer d-flex flex-row justify-content-center">
       <nav aria-label="TaskPagination">
         <ul class="pagination">

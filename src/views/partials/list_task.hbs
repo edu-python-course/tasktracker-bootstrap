@@ -1,0 +1,22 @@
+<tr class="task" id="{{pk}}" data-task-completed="{{completed}}">
+  <td class="align-middle" aria-label="TaskAssignee">
+    <img src="{{assignee_image}}" alt="avatar" class="rounded-circle shadow avatar">
+    <span class="d-none d-md-inline text-nowrap ms-2">{{assignee_first_name}} {{assignee_last_name}}</span>
+  </td>
+  <td class="align-middle" aria-label="TaskReference">
+    <a href="">{{summary}}</a>
+  </td>
+  <td class="align-middle" aria-label="TaskActions">
+    <div class="d-flex flex-row justify-content-between align-items-center">
+      {{#if completed}}
+        <i class="bi bi-arrow-repeat{{#unless can_edit}} disabled{{/unless}}" role="button"
+           data-task-target="{{pk}}" aria-label="reopen"></i>
+      {{else}}
+        <i class="bi bi-check-lg{{#unless can_edit}} disabled{{/unless}}" role="button"
+           data-task-target="{{pk}}" aria-label="complete"></i>
+      {{/if}}
+      <i class="bi bi-trash{{#unless can_edit}} disabled{{/unless}}" role="button"
+         data-task-target="{{pk}}" aria-label="delete"></i>
+    </div>
+  </td>
+</tr>
