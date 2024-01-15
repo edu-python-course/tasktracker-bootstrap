@@ -30,8 +30,11 @@ module.exports = {
     plugins: [
         new MiniCSSExtractPlugin({filename:"css/main.min.css"}),
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, "src/views/_template.hbs"),
-            filename: "index.html"
+            template: path.resolve(__dirname, "src/views/list_view.hbs"),
+            filename: "tasks/task_list.html",
+            templateParameters: {
+                title: "Tasks List",
+            }
         })
     ],
     module: {
