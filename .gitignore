@@ -1,0 +1,27 @@
+# ide configs
+/.vscode/
+/.idea/
+
+# virtual environemts (may be required for specific operations)
+/.venv/
+/.env/
+/venv/
+/env/
+
+# python byte-compiled
+__pycache__
+
+# node modules
+/node_modules/
+
+# distribution directory
+/build/
+/dist/
+
+# temporary files storage
+/temp/
+/tmp/
+
+# emacs cache and backup files
+\#*
+*~
