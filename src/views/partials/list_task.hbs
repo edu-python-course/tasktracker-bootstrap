@@ -2,20 +2,22 @@
   <td class="align-middle" aria-label="TaskAssignee">
     <img src="{{assignee_image}}" alt="avatar" class="rounded-circle shadow avatar">
     <br>
-    <span class="d-none d-md-inline text-nowrap ms-2">{{assignee_first_name}} {{assignee_last_name}}</span>
+    <span class="d-none d-md-inline ms-2 text-nowrap">{{assignee_first_name}} {{assignee_last_name}}</span>
   </td>
   <td class="align-middle" aria-label="TaskDetails">
-    <a href="" class="text-decoration-none">{{summary}}</a>
-    <p class="text-muted">{{description}}</p>
+    <div>
+      <a href="{{DetailView}}" class="text-decoration-none fw-bold task-detail-ref">{{summary}}</a>
+    </div>
+    <p class="d-none d-lg-block fst-italic text-muted">{{description}}</p>
   </td>
   <td class="align-middle" aria-label="TaskActions">
     <div class="d-flex flex-row justify-content-between align-items-center">
       {{#if completed}}
         <i class="bi bi-arrow-repeat{{#unless can_edit}} disabled{{/unless}}" role="button"
-           data-task-target="{{pk}}" aria-label="reopen"></i>
+           data-task-target="{{pk}}" aria-label="reopen"></i> {{! TODO: patch-status ? }}
       {{else}}
         <i class="bi bi-check-lg{{#unless can_edit}} disabled{{/unless}}" role="button"
-           data-task-target="{{pk}}" aria-label="complete"></i>
+           data-task-target="{{pk}}" aria-label="complete"></i> {{! TODO: patch-status? }}
       {{/if}}
       <i class="bi bi-trash{{#unless can_edit}} disabled{{/unless}}" role="button"
          data-task-target="{{pk}}" aria-label="delete"></i>
