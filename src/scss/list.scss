@@ -1,0 +1,46 @@
+// task list view stylesheet
+
+$list-img-max-size: 5rem;
+
+.task {
+  [aria-label=TaskAssignee] {
+    img.avatar {
+      max-height: $list-img-max-size;
+      max-width: $list-img-max-size;
+      margin-bottom: 1rem;
+    }
+  }
+
+  [aria-label=TaskDetails] {
+    div:first-of-type {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  [aria-label=TaskActions] {
+    .disabled {
+      pointer-events: none;
+      color: var(--bs-secondary-color);
+    }
+  }
+
+  // action buttons
+  [aria-label=complete] {
+    color: var(--bs-success);
+  }
+
+  [aria-label=reopen] {
+    color: var(--bs-warning);
+  }
+
+  [aria-label=delete] {
+    color: var(--bs-danger);
+  }
+}
+
+.task[data-task-completed=true] {
+  .task-detail-ref {
+    color: var(--bs-secondary-color) !important;
+    text-decoration: line-through !important;
+  }
+}

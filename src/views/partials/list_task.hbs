@@ -1,0 +1,26 @@
+<tr class="task" id="{{pk}}" data-task-completed="{{completed}}">
+  <td class="align-middle" aria-label="TaskAssignee">
+    <img src="{{assignee_image}}" alt="avatar" class="rounded-circle shadow avatar">
+    <br>
+    <span class="d-none d-md-inline ms-2 text-nowrap">{{assignee_first_name}} {{assignee_last_name}}</span>
+  </td>
+  <td class="align-middle" aria-label="TaskDetails">
+    <div>
+      <a href="{{DetailView}}" class="text-decoration-none fw-bold task-detail-ref">{{summary}}</a>
+    </div>
+    <p class="d-none d-lg-block fst-italic text-muted">{{description}}</p>
+  </td>
+  <td class="align-middle" aria-label="TaskActions">
+    <div class="d-flex flex-row justify-content-between align-items-center">
+      {{#if completed}}
+        <i class="bi bi-arrow-repeat{{#unless can_edit}} disabled{{/unless}}" role="button"
+           data-task-target="{{pk}}" aria-label="reopen"></i> {{! TODO: patch-status ? }}
+      {{else}}
+        <i class="bi bi-check-lg{{#unless can_edit}} disabled{{/unless}}" role="button"
+           data-task-target="{{pk}}" aria-label="complete"></i> {{! TODO: patch-status? }}
+      {{/if}}
+      <i class="bi bi-trash{{#unless can_edit}} disabled{{/unless}}" role="button"
+         data-task-target="{{pk}}" aria-label="delete"></i>
+    </div>
+  </td>
+</tr>

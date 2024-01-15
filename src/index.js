@@ -8,3 +8,5 @@
 import "bootstrap-icons/font/bootstrap-icons.scss"
 import "bootstrap/scss/bootstrap.scss"
 import * as bootstrap from "bootstrap"
+
+import "./scss/list.scss"
