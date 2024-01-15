@@ -1,0 +1,53 @@
+<main class="col col-md-10 col-lg-9">
+  <div class="card shadow" id="taskDetailsContainer">
+    <div class="card-header">
+      <h1 class="card-title h3 text-center">
+        {{#if completed}}<i class="bi bi-check-lg text-success"></i>&nbsp;{{/if}}
+        {{summary}}
+      </h1>
+      <hr class="border">
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="col">
+          <strong class="me-1">Assignee:</strong>
+          <span>{{assignee}}</span>
+        </div>
+        <div class="col">
+          <strong class="me-1">Reporter:</strong>
+          <span>{{reporter}}</span>
+        </div>
+        <div class="col">
+          <strong class="me-1">Created:</strong>
+          <span>{{created_at}}</span>
+        </div>
+        <div class="col">
+          <strong class="me-1">Updated:</strong>
+          <span>{{updated_at}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      {{description}}
+    </div>
+    <div class="card-footer" aria-label="TaskActions">
+      {{#if can_edit}}
+        <div class="d-flex justify-content-end align-items-center">
+          {{#if completed}}
+            <button class="btn btn-outline-warning mx-3" data-task-target="{{pk}}" aria-label="reopen">
+              Reopen
+            </button>
+          {{else}}
+            <button class="btn btn-outline-success mx-3" data-task-target="{{pk}}" aria-label="complete">
+              Complete
+            </button>
+          {{/if}}
+          <div class="btn-group" role="group">
+            <a href="{{FormView}}" class="btn btn-outline-primary" role="button">Update</a>
+            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalTaskDelete">
+              Delete
+            </button>
+          </div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</main>
