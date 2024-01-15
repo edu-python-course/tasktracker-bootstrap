@@ -4,8 +4,11 @@
       <h1 class="card-title text-center">{{user}}</h1>
       <p class="h5 text-center">{{email}}</p>
     </div>
-    <div class="card-body row row-cols-2">
-      <section class="col"></section>
+    <div class="card-body">
+      <div class="row row-cols-1 row-cols-md-2">
+      <section class="col d-flex justify-content-center">
+        <img src="{{image}}" alt="avatar" class="rounded-circle shadow avatar">
+      </section>
       <section class="col">
         <ul class="nav nav-underline" role="tablist">
           <li class="nav-item" role="presentation">
@@ -32,6 +35,7 @@
           </div>
         </div>
       </section>
+      </div>
     </div>
   </div>
 </main>
