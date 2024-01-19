@@ -1,0 +1,74 @@
+<main class="col col-md-10 col-lg-9">
+  <div class="card shadow">
+    <div class="card-header">
+      <h1 class="card-title text-center">{{user}}</h1>
+      <p class="h5 text-center">{{email}}</p>
+    </div>
+    <div class="card-body">
+      <div class="row row-cols-1 row-cols-md-2">
+        <section class="col d-flex justify-content-center">
+          <img src="{{image}}" alt="avatar" class="rounded-circle shadow avatar">
+        </section>
+        <section class="col">
+          <ul class="nav nav-underline mb-3" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tasks-tab" data-bs-toggle="tab" data-bs-target="#tasks-tab-pane"
+                      type="button" role="tab" aria-controls="tasks-tab-pane" aria-selected="true">
+                Recent active tasks
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="edit-tab" data-bs-toggle="tab" data-bs-target="#edit-tab-pane"
+                      type="button" role="tab" aria-controls="edit-tab-pane" aria-selected="false"
+                {{#unless is_owner}} disabled{{/unless}}>
+                Edit profile
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tasks-tab-pane"
+                 role="tabpanel" aria-labelledby="tasks-tab" tabindex="0">
+              <div class="list-group list-group-flush">
+                <a href="{{DetailView}}" class="list-group-item list-group-item-action">
+                  The delighted dosi proudly consumes the star.
+                </a>
+                <a href="{{DetailView}}" class="list-group-item list-group-item-action">
+                  Spacecrafts fly from attitudes like cold phenomenans.
+                </a>
+                <a href="{{DetailView}}" class="list-group-item list-group-item-action">
+                  Space suits die with attitude at the final parallel universe.
+                </a>
+                <a href="{{DetailView}}" class="list-group-item list-group-item-action">
+                  The ugly crewmate oddly deserves the alien.
+                </a>
+                <a href="{{DetailView}}" class="list-group-item list-group-item-action">
+                  The united pathway never observes the ship.
+                </a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="edit-tab-pane" role="tabpanel" aria-labelledby="edit-tab"
+                 tabindex="0">
+              <form action="" id="formUserdata" aria-label="ChangeUserdata">
+                <div class="mb-2">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="firstName" name="first_name">
+                </div>
+                <div class="mb-2">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastName" name="last_name">
+                </div>
+                <div class="mb-2">
+                  <label for="image" class="form-label">User image</label>
+                  <input type="file" class="form-control" id="image" name="image">
+                </div>
+                <div class="d-flex flex-row justify-content-end my-2">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
