@@ -32,22 +32,49 @@
       {{#if can_edit}}
         <div class="d-flex justify-content-end align-items-center">
           {{#if completed}}
-            <button class="btn btn-outline-warning mx-3" data-task-target="{{pk}}" aria-label="reopen">
+            <button class="btn btn-outline-warning mx-3"
+                    data-task-target="{{pk}}" aria-label="reopen">  {{! TODO: patch? }}
               Reopen
             </button>
           {{else}}
-            <button class="btn btn-outline-success mx-3" data-task-target="{{pk}}" aria-label="complete">
+            <button class="btn btn-outline-success mx-3"
+                    data-task-target="{{pk}}" aria-label="complete">  {{! TODO: patch? }}
               Complete
             </button>
           {{/if}}
           <div class="btn-group" role="group">
             <a href="{{FormView}}" class="btn btn-outline-primary" role="button">Update</a>
-            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalTaskDelete">
+            <button class="btn btn-outline-danger"
+                    data-bs-toggle="modal" data-bs-target="#modalTaskDelete">
               Delete
             </button>
           </div>
         </div>
       {{/if}}
+    </div>
+  </div>
+  <div class="modal fade" id="modalTaskDelete" tabindex="-1"
+       aria-labelledby="modalTaskDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalTaskDeleteLabel">Are you sure you want to delete task?</h1>
+        </div>
+        <div class="modal-body">
+          <p>Task will be permanently deleted.</p>
+          <p class="fw-bold text-center">{{summary}}</p>
+          <div class="row row-cols-2">
+            <div class="col">Reporter: {{reporter}}</div>
+            <div class="col">Assignee: {{assignee}}</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <form action="">
+            <button class="btn btn-secondary mx-1" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-danger mx-1" type="submit">Confirm</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </main>
