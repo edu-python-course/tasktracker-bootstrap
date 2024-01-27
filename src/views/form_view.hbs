@@ -10,7 +10,7 @@
   <title>{{title}} | Task Tracker</title>
 </head>
 <body>
-{{! TODO: add header/navbar }}
+{{>partials/_navbar is_authenticated=true}}
 <div class="container">
   <div class="row justify-content-center">
     {{>partials/form_main}}
