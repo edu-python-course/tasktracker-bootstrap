@@ -1,0 +1,26 @@
+<div class="container" role="navigation">
+  <nav class="navbar navbar-expand-lg mb-3">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a href="" class="navbar-brand"><i class="bi bi-list-task"></i>&nbsp;Task Tracker</a>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {{# if is_admin }}  {{! visible for admins only }}
+            <li class="nav-item"><a href="" class="nav-link">Administration</a></li>
+          {{/if}}
+          {{# if is_authenticated }}  {{! visible for authenticated users only }}
+            <li class="nav-item"><a href="" class="nav-link btn btn-outline-primary mx-2">Create new</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Profile</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Sign Out</a></li>
+          {{else}}
+            <li class="nav-item"><a href="" class="nav-link">Sign Up</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Sign In</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
