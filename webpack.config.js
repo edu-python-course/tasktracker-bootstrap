@@ -12,12 +12,13 @@ const path = require("path")
 const autoprefixer = require("autoprefixer")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
+const api = require("./api/settings")
 
 // webpack config object
-// noinspection WebpackConfigHighlighting
+// noinspection WebpackConfigHighlighting,HttpUrlsUsage
 module.exports = {
     mode: "development",
-    output:{
+    output: {
         filename: "js/main.bundle.js",
         path: path.resolve(__dirname, "dist"),
         clean: true
@@ -25,10 +26,16 @@ module.exports = {
     devServer: {
         static: path.resolve(__dirname, "dist"),
         port: 3000,
-        hot: true
+        hot: true,
+        proxy: {
+            "/api/*": {
+                target: `http://${api.host}:${api.port}`,
+                secure: false,
+            }
+        }
     },
     plugins: [
-        new MiniCSSExtractPlugin({filename:"css/main.min.css"}),
+        new MiniCSSExtractPlugin({filename: "css/main.min.css"}),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/list_view.hbs"),
             filename: "tasks/task_list.html",
