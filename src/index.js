@@ -18,3 +18,5 @@ import "./scss/list.scss"
 import "./scss/profile.scss"
 import "./scss/sign-in.scss"
 import "./scss/sign-up.scss"
+
+import "./js/tasks"
