@@ -6,7 +6,7 @@ const swapTaskCompletedStatus = ({pk, completed}) => {
 
 const swapTaskPatchButton = ({element, completed}) => {
     element.setAttribute("hx-vals", `js:{completed:${!completed}}`)
-    element.classList = ["bi"] // clean class list
+    element.classList.remove("bi-arrow-repeat", "bi-check-lg")
     if (completed) {
         element.classList.add("bi-arrow-repeat")
     } else {
@@ -17,11 +17,14 @@ const swapTaskPatchButton = ({element, completed}) => {
 
 document.body.addEventListener("htmx:afterOnLoad", (event) => {
     const xhr = event.detail.xhr
-    const response = JSON.parse(xhr.response)
+    if (xhr.status !== 200) return  // do nothing if request wasn't successful
+
     const triggeredElement = event.detail.elt
     const action = triggeredElement.getAttribute("data-task-action")
+    let response = xhr.response
 
     if (action === "patch" && xhr.responseURL.includes("tasks")) {
+        response = JSON.parse(response)
         swapTaskPatchButton({...response, element: triggeredElement})
         swapTaskCompletedStatus(response)
     }
