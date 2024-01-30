@@ -9,6 +9,9 @@ import "bootstrap-icons/font/bootstrap-icons.scss"
 import "bootstrap/scss/bootstrap.scss"
 import * as bootstrap from "bootstrap"
 
+// include htmx library
+import * as htmx from "htmx.org"
+
 import "./scss/detail.scss"
 import "./scss/form.scss"
 import "./scss/list.scss"
