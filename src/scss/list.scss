@@ -25,15 +25,11 @@ $list-img-max-size: 5rem;
   }
 
   // action buttons
-  [aria-label=complete] {
+  [data-task-action=patch] {
     color: var(--bs-success);
   }
 
-  [aria-label=reopen] {
-    color: var(--bs-warning);
-  }
-
-  [aria-label=delete] {
+  [data-task-action=delete] {
     color: var(--bs-danger);
   }
 }
@@ -42,5 +38,9 @@ $list-img-max-size: 5rem;
   .task-detail-ref {
     color: var(--bs-secondary-color) !important;
     text-decoration: line-through !important;
+  }
+
+  [data-task-action=patch] {
+    color: var(--bs-warning)
   }
 }
