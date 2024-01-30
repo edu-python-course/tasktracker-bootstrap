@@ -20,6 +20,7 @@
            data-task-target="{{pk}}" aria-label="complete"></i> {{! TODO: patch-status? }}
       {{/if}}
       <i class="bi bi-trash{{#unless can_edit}} disabled{{/unless}}" role="button"
+         hx-delete="/api/v1/tasks/{{pk}}" hx-target="closest tr" hx-swap="outerHTML"
          data-task-target="{{pk}}" aria-label="delete"></i>
     </div>
   </td>
