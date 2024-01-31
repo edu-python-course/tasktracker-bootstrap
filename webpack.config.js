@@ -105,6 +105,13 @@ module.exports = {
                 }
             },
             {
+                test: /\.(woff|woff2|ttf|eot)$/,
+                type: "asset/resource",
+                generator: {
+                    filename: "fonts/[name][ext][query]"
+                }
+            },
+            {
                 mimetype: "image/svg+xml",
                 scheme: "data",
                 type: "asset/resource",
