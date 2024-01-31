@@ -1,0 +1,25 @@
+// authentication form view stylesheet
+
+$input-border-radius: 0.75rem;
+
+#formAuth {
+  .form-floating {
+    input {
+      border-radius: 0;
+    }
+  }
+
+  .form-floating:first-of-type {
+    input {
+      border-top-right-radius: $input-border-radius;
+      border-top-left-radius: $input-border-radius;
+    }
+  }
+
+  .form-floating:last-of-type {
+    input {
+      border-bottom-right-radius: $input-border-radius;
+      border-bottom-left-radius: $input-border-radius;
+    }
+  }
+}
