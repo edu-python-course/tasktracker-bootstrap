@@ -2,11 +2,6 @@
 
 This repo contains Bootstrap templates for the task tracker project.
 
-Getting started
----------------
-
-[//]: # (TODO: complete getting section)
-
 References
 ----------
 

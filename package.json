@@ -1,6 +1,6 @@
 {
   "name": "tasktracker-bootstrap",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Task tracker site bootstrap5 templates",
   "private": true,
   "scripts": {
