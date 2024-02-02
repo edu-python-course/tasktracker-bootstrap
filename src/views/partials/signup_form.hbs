@@ -1,25 +1,27 @@
-<form class="w-50 m-auto" id="formAuth" aria-label="Login Form">
-  <h1 class="h3 fw-normal mb-3 text-center">Register a new account</h1>
-  <div class="form-floating">
-    <input type="text" class="form-control shadow" id="username" name="username" placeholder="Username">
-    <label for="username">Username</label>
-  </div>
-  <div class="form-floating">
-    <input type="email" class="form-control shadow" id="email" name="email" placeholder="Email">
-    <label for="email">Email</label>
-  </div>
-  <div class="form-floating">
-    <input type="password" class="form-control shadow" id="password" name="password" placeholder="Password">
-    <label for="password">Password</label>
-  </div>
-  <div class="form-floating">
-    <input type="password" class="form-control shadow" id="confirmPassword" name="confirm_password"
-           placeholder="Confirm Password">
-    <label for="confirmPassword">Confirm Password</label>
-  </div>
-  <p class="text-center mt-3">
-    Already have an account?
-    <a href="{{SignInView}}" class="text-body fw-bold">Login</a>
-  </p>
-  <button class="btn btn-primary w-100 mt-2"><span class="h3">Register</span></button>
-</form>
+<main class="col col-md-10 col-lg-9">
+  <form class="w-50 m-auto" id="formAuth" aria-label="Login Form">
+    <h1 class="h3 fw-normal mb-3 text-center">Register a new account</h1>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control shadow" id="username" name="username" placeholder="Username">
+      <label for="username">Username</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control shadow" id="email" name="email" placeholder="Email">
+      <label for="email">Email</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control shadow" id="password" name="password" placeholder="Password">
+      <label for="password">Password</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control shadow" id="confirmPassword" name="confirm_password"
+             placeholder="Confirm Password">
+      <label for="confirmPassword">Confirm Password</label>
+    </div>
+    <button class="btn btn-primary w-100 my-2"><span class="h3">Sign Up</span></button>
+    <p class="text-center mt-3">
+      Already have an account?
+      <a href="{{SignInView}}" class="text-body fw-bold">Login</a>
+    </p>
+  </form>
+</main>
