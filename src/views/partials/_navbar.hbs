@@ -12,8 +12,10 @@
             <li class="nav-item"><a href="{{AdminIndex}}" class="nav-link">Administration</a></li>
           {{/if}}
           {{# if is_authenticated }}  {{! visible for authenticated users only }}
-            <li class="nav-item"><a href="{{FormView}}" class="nav-link btn btn-outline-primary mx-2">Create new</a></li>
-            <li class="nav-item"><a href="{{ProfileView}}" class="nav-link">Profile</a></li>
+            {{# unless is_admin }}
+              <li class="nav-item"><a href="{{FormView}}" class="nav-link">Create new</a></li>
+              <li class="nav-item"><a href="{{ProfileView}}" class="nav-link">Profile</a></li>
+            {{/unless}}
             <li class="nav-item"><a href="{{SignOutView}}" class="nav-link">Sign Out</a></li>
           {{else}}
             <li class="nav-item"><a href="{{SignUpView}}" class="nav-link">Sign Up</a></li>
