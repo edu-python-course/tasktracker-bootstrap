@@ -15,7 +15,6 @@ import * as htmx from "htmx.org"
 // include custom stylesheets, javascript, icons etc.
 import "./scss/auth.scss"
 import "./scss/detail.scss"
-import "./scss/form.scss"
 import "./scss/list.scss"
 import "./scss/profile.scss"
 
