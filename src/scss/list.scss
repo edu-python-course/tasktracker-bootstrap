@@ -19,17 +19,17 @@ $list-img-max-size: 5rem;
 
   [aria-label=TaskActions] {
     .disabled {
-      pointer-events: none;
-      color: var(--bs-secondary-color);
+      pointer-events: none !important;
+      color: var(--bs-secondary-color) !important;
     }
   }
 
   // action buttons
-  [data-task-action=patch] {
+  [hx-patch] {
     color: var(--bs-success);
   }
 
-  [data-task-action=delete] {
+  [hx-delete] {
     color: var(--bs-danger);
   }
 }
@@ -40,7 +40,7 @@ $list-img-max-size: 5rem;
     text-decoration: line-through !important;
   }
 
-  [data-task-action=patch] {
+  [hx-patch] {
     color: var(--bs-warning)
   }
 }
