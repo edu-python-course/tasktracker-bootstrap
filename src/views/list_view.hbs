@@ -14,8 +14,10 @@
 <body>
 {{>partials/_navbar is_authenticated=true}}
 <div class="container">
-  <div class="row justify-content-center">
-    {{>partials/list_main}}
+  <div class="row row-cols-1 justify-content-center">
+    <main class="col col-md-10 col-lg-9">
+      {{>partials/list_main}}
+    </main>
   </div>
 </div>
 </body>
