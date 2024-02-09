@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // collect toasts elements
     const toasts = document.querySelectorAll(".toast")
     toasts.forEach(toast => {
-        new bootstrap.Toast(toast) // initialize toast
-        let instance = bootstrap.Toast.getInstance(toast)
+        let instance = bootstrap.Toast.getOrCreateInstance(toast, {autohide: false})
         instance.show()
     })
 })
