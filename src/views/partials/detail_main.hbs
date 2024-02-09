@@ -1,4 +1,4 @@
-<div class="card shadow" id="taskDetailsContainer">
+<div class="card shadow" id="taskDetailContainer">
   <div class="card-header">
     <h1 class="card-title h3 text-center" id="summary">
       {{#if completed}}<i class="bi bi-check-lg text-success"></i>{{/if}}
@@ -27,7 +27,7 @@
   <div class="card-body">
     {{description}}
   </div>
-  <div class="card-footer" aria-label="TaskActions">
+  <div class="card-footer">
     {{#if can_edit}}
       <div class="d-flex justify-content-end align-items-center">
         {{#if completed}}

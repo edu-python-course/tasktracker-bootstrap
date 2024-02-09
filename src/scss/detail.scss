@@ -1,10 +1,8 @@
-// detail view stylesheet
-
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 
-#taskDetailsContainer {
+#taskDetailContainer {
   > * {
     padding-top: 1rem;
     padding-bottom: 1rem;
