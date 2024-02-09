@@ -18,7 +18,7 @@ import "./scss/detail.scss"
 import "./scss/list.scss"
 import "./scss/profile.scss"
 
-import "./js/messages"
+import * as messages from "./js/messages"
 import "./js/tasks"
 
 import "./img/favicon.png"
@@ -26,3 +26,4 @@ import "./img/favicon.svg"
 
 // make global visible
 window.bootstrap = bootstrap
+window.messages = messages

@@ -49,11 +49,14 @@ const swapTaskPatchButton = ({element, completed}) => {
 
 
 document.body.addEventListener("htmx:afterOnLoad", (event) => {
+    const xhr = event.detail.xhr
+    if (xhr.status < 200 || xhr.status > 299) {
+        messages.show("Something went wrong")
+        return
+    }
+
     // noinspection JSUnresolvedReference
     const method = event.detail.requestConfig.verb
-    const xhr = event.detail.xhr
-    if (xhr.status < 200 || xhr.status > 299) return  // do nothing if request wasn't successful
-
     const triggeredElement = event.detail.elt
     let response = xhr.response
 
