@@ -1,12 +1,13 @@
-<form class="w-50 m-auto form-task" aria-label="TaskForm">
-  <h1 class="h3 fw-normal mb-3 text-center">Task details form</h1>
+<h1 class="h3 fw-normal mb-3 text-center">Task details</h1>
+<form class="w-75 m-auto" aria-label="TaskForm">
   <div class="mb-3">
     <label for="summary" class="form-label">Summary</label>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" id="summary" name="summary">
-      <div class="input-group-text">
-        <input class="form-check-input mt-0" type="checkbox" id="completed" name="completed" aria-label="completed">
-      </div>
+    <input type="text" class="form-control" id="summary" name="summary">
+  </div>
+  <div class="mb-3">
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="completed" name="completed">
+      <label for="completed" class="form-check-label">Completed</label>
     </div>
   </div>
   <div class="mb-3">
@@ -22,8 +23,12 @@
       <option value="WilcomeBrownlock@teleworm.us">Wilcome Brownlock</option>
     </select>
   </div>
-  <div class="d-flex flex-row">
-    <a href="{{ListView}}" class="btn btn-secondary w-50 mt-3 mx-3">Cancel</a>
-    <button type="submit" class="btn btn-primary w-50 mt-3 mx-3">Submit</button>
+  <div class="mb-3 justify-content-center">
+    <input type="submit" class="btn btn-primary w-100 mt-3" name="submit" value="Submit">
   </div>
 </form>
+<div class="d-flex flex-row justify-content-center">
+  <div class="w-75">
+    <a href="" class="w-100 btn btn-secondary">Cancel</a>
+  </div>
+</div>
