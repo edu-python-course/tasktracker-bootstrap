@@ -1,12 +1,10 @@
 const swapTaskListCompletedStatus = ({uuid, completed}) => {
-    console.debug("swap task list completed status")
     const element = document.getElementById(uuid)
     if (element) element.setAttribute("data-task-completed", completed)
 }
 
 
 const swapTaskDetailedCompletedStatus = ({completed}) => {
-    console.debug("swap task detail completed status")
     const element = document.querySelector("h1#summary")
     if (!element) return
 
@@ -22,7 +20,6 @@ const swapTaskDetailedCompletedStatus = ({completed}) => {
 
 
 const updateListActionButton = (element, completed) => {
-    console.debug("update list action button")
     element.classList.remove("bi-arrow-repeat", "bi-check-lg")
     if (completed) {
         element.classList.add("bi-arrow-repeat")
@@ -33,7 +30,6 @@ const updateListActionButton = (element, completed) => {
 
 
 const updateDetailActionButton = (element, completed) => {
-    console.debug("update detail action button")
     element.classList.remove("btn-outline-warning", "btn-outline-success")
     if (completed) {
         element.classList.add("btn-outline-warning")
@@ -46,7 +42,6 @@ const updateDetailActionButton = (element, completed) => {
 
 
 const swapTaskPatchButton = ({element, completed}) => {
-    console.debug("swap task patch button")
     element.setAttribute("hx-vals", `js:{completed:${!completed}}`)
     if (element.matches("i[role=button]")) updateListActionButton(element, completed)
     if (element.matches("button.btn")) updateDetailActionButton(element, completed)
