@@ -54,17 +54,22 @@ const swapTaskPatchButton = ({element, completed}) => {
 
 
 document.body.addEventListener("htmx:afterOnLoad", (event) => {
+    // noinspection JSUnresolvedReference
+    const method = event.detail.requestConfig.verb
     const xhr = event.detail.xhr
-    if (xhr.status !== 200) return  // do nothing if request wasn't successful
+    if (xhr.status < 200 || xhr.status > 299) return  // do nothing if request wasn't successful
 
     const triggeredElement = event.detail.elt
-    const action = triggeredElement.getAttribute("data-task-action")
     let response = xhr.response
 
-    if (action === "patch" && xhr.responseURL.includes("tasks")) {
+    if (method === "patch" && xhr.responseURL.includes("tasks")) {
         response = JSON.parse(response)
         swapTaskPatchButton({...response, element: triggeredElement})
         swapTaskDetailedCompletedStatus(response)
         swapTaskListCompletedStatus(response)
+    }
+
+    if (method === "delete" && xhr.responseURL.includes("tasks")) {
+        event.detail.target.remove()
     }
 })

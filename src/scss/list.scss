@@ -3,7 +3,7 @@
 $list-img-max-size: 5rem;
 
 .task {
-  [aria-label=TaskAssignee] {
+  .task-assignee {
     img.avatar {
       max-height: $list-img-max-size;
       max-width: $list-img-max-size;
@@ -11,13 +11,13 @@ $list-img-max-size: 5rem;
     }
   }
 
-  [aria-label=TaskDetails] {
+  .task-detail {
     div:first-of-type {
       margin-bottom: 0.5rem;
     }
   }
 
-  [aria-label=TaskActions] {
+  .task-actions {
     .disabled {
       pointer-events: none !important;
       color: var(--bs-secondary-color) !important;
