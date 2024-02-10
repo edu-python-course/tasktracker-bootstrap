@@ -1,87 +1,85 @@
-<main class="col col-md-10 col-lg-9">
-  <div class="card shadow">
-    <div class="card-header d-flex flex-row justify-content-center">
-      <h1 class="card-title h3 text-capitalize mx-auto my-2"><i class="bi bi-list-task"></i>&nbsp;task list</h1>
-    </div>
-    <div class="card-body">
-      <table class="table">
-        <caption class="visually-hidden">task list</caption>
-        <thead>
-        <tr>
-          <th class="col col-3" scope="col">Assignee</th>
-          <th class="col col-8" scope="col">Task Summary</th>
-          <th class="col d-flex flex-row justify-content-center" scope="col">Actions</th>
-        </tr>
-        </thead>
-        <tbody id="taskContainer">
-        {{! repeating tasks block }}
-        {{>list_task
-            pk="d5870f6d-8431-47ac-84e4-ef9de83ee622"
-            summary="Shield at the holodeck was the energy of assimilation, lowered to a chemical c-beam."
-            description="The creature is more transformator now than starship. solid and always quirky.
+<div class="card shadow">
+  <div class="card-header d-flex flex-row justify-content-center">
+    <h1 class="card-title h3 text-capitalize mx-auto my-2"><i class="bi bi-list-task"></i>&nbsp;task list</h1>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <caption class="visually-hidden">task list</caption>
+      <thead>
+      <tr>
+        <th class="col col-3" id="taskAssignee" scope="col">Assignee</th>
+        <th class="col col-8" id="taskDetail" scope="col">Task Details</th>
+        <th class="col d-flex flex-row justify-content-center" id="taskActions" scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody id="taskContainer">
+      {{! repeating tasks block }}
+      {{>list_task
+          pk="d5870f6d-8431-47ac-84e4-ef9de83ee622"
+          summary="Shield at the holodeck was the energy of assimilation, lowered to a chemical c-beam."
+          description="The creature is more transformator now than starship. solid and always quirky.
             energy at the wormhole was the life of ellipse, grabed to a mysterious proton.
             adventure at the space station was the flight of honor, translated to a unrelated hur'q.
             Mermaids reproduce from pressures like sub-light hur'qs?"
-            assignee_image="https://i.pravatar.cc/?u=DoraHeadstrong@dayrep.com"
-            assignee_first_name="Dora"
-            assignee_last_name="Headstrong"
-            completed=false
-            can_edit=false
-        }}
-        {{>list_task
-            pk="1f380d72-ecf0-454a-99c8-7fde60c4d22f"
-            summary="Sensor at the universe was the pattern of love, empowered to a futile alien."
-            description="The nanomachine is more admiral now than processor. senior and patiently dead.
+          assignee_image="https://i.pravatar.cc/?u=DoraHeadstrong@dayrep.com"
+          assignee_first_name="Dora"
+          assignee_last_name="Headstrong"
+          completed=false
+          can_edit=false
+      }}
+      {{>list_task
+          pk="1f380d72-ecf0-454a-99c8-7fde60c4d22f"
+          summary="Sensor at the universe was the pattern of love, empowered to a futile alien."
+          description="The nanomachine is more admiral now than processor. senior and patiently dead.
             pattern at the center was the death of attitude, loved to a biological ship.
             sensor at the space station was the assimilation of resistance, destroyed to an ancient crew.
             The collective admiral finally manifests the planet?"
-            assignee_image="https://i.pravatar.cc/?u=PippinSackville-Baggins@jourrapide.com"
-            assignee_first_name="Pippin"
-            assignee_last_name="Sackville-Baggins"
-            completed=false
-            can_edit=true
-        }}
-        {{>list_task
-            pk="d04c3467-65a4-436e-82dd-5b81c954eb0f"
-            summary="Flight at the ready room was the vision of alignment, empowered to a quirky vogon."
-            description="The particle is more creature now than transformator. virtual and rudely lunar.
+          assignee_image="https://i.pravatar.cc/?u=PippinSackville-Baggins@jourrapide.com"
+          assignee_first_name="Pippin"
+          assignee_last_name="Sackville-Baggins"
+          completed=false
+          can_edit=true
+      }}
+      {{>list_task
+          pk="d04c3467-65a4-436e-82dd-5b81c954eb0f"
+          summary="Flight at the ready room was the vision of alignment, empowered to a quirky vogon."
+          description="The particle is more creature now than transformator. virtual and rudely lunar.
             starlight travel at the ready room was the powerdrain of faith, evacuated to a most unusual moon.
             courage at the alpha quadrant was the ionic cannon of tragedy, invaded to a modern space suit.
             The seismic admiral patiently fights the proton?"
-            assignee_image="https://i.pravatar.cc/?u=TobyMugwort@armyspy.com"
-            assignee_first_name="Toby"
-            assignee_last_name="Mugwort"
-            completed=true
-            can_edit=false
-        }}
-        {{>list_task
-            pk="0b329fae-3b4f-45ca-bd50-5312c8bc4fe2"
-            summary="When the shark waves for jamaica, all comrades mark salty, weird woodchucks."
-            description="The yardarm sails with courage, fight the reef before it whines.
+          assignee_image="https://i.pravatar.cc/?u=TobyMugwort@armyspy.com"
+          assignee_first_name="Toby"
+          assignee_last_name="Mugwort"
+          completed=true
+          can_edit=false
+      }}
+      {{>list_task
+          pk="0b329fae-3b4f-45ca-bd50-5312c8bc4fe2"
+          summary="When the shark waves for jamaica, all comrades mark salty, weird woodchucks."
+          description="The yardarm sails with courage, fight the reef before it whines.
             amnesty, faith, and malaria. undead, coal-black mainlands darkly drink a cloudy, lively gold.
             yo-ho-ho, never fear a cockroach. the plank burns with fight, crush the brig until it sings.
             Tobaccos whine from amnesties like fine shipmates?"
-            assignee_image="https://i.pravatar.cc/?u=WilcomeBrownlock@teleworm.us"
-            assignee_first_name="Wilcome"
-            assignee_last_name="Brownlock"
-            completed=true
-            can_edit=true
-        }}
-        </tbody>
-      </table>
-    </div>
-    <div class="card-footer d-flex flex-row justify-content-center">
-      <nav aria-label="TaskPagination">
-        <ul class="pagination">
-          <li class="page-item disabled"><a href="" class="page-link"><i class="bi bi-chevron-left"></i></a></li>
-          <li class="page-item active"><a href="" class="page-link">1</a></li>
-          <li class="page-item"><a href="" class="page-link">2</a></li>
-          <li class="page-item"><a href="" class="page-link">3</a></li>
-          <li class="page-item"><a href="" class="page-link">4</a></li>
-          <li class="page-item"><a href="" class="page-link">5</a></li>
-          <li class="page-item"><a href="" class="page-link"><i class="bi bi-chevron-right"></i></a></li>
-        </ul>
-      </nav>
-    </div>
+          assignee_image="https://i.pravatar.cc/?u=WilcomeBrownlock@teleworm.us"
+          assignee_first_name="Wilcome"
+          assignee_last_name="Brownlock"
+          completed=true
+          can_edit=true
+      }}
+      </tbody>
+    </table>
   </div>
-</main>
+  <div class="card-footer d-flex flex-row justify-content-center">
+    <nav aria-label="TaskPagination">
+      <ul class="pagination">
+        <li class="page-item disabled"><a href="" class="page-link"><i class="bi bi-chevron-left"></i></a></li>
+        <li class="page-item active"><a href="" class="page-link">1</a></li>
+        <li class="page-item"><a href="" class="page-link">2</a></li>
+        <li class="page-item"><a href="" class="page-link">3</a></li>
+        <li class="page-item"><a href="" class="page-link">4</a></li>
+        <li class="page-item"><a href="" class="page-link">5</a></li>
+        <li class="page-item"><a href="" class="page-link"><i class="bi bi-chevron-right"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

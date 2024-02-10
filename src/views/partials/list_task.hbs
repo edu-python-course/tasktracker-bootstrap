@@ -1,16 +1,16 @@
 <tr class="task" id="{{pk}}" data-task-completed="{{completed}}">
-  <td class="align-middle" aria-label="TaskAssignee">
+  <td class="align-middle task-assignee" aria-labelledby="taskAssignee">
     <img src="{{assignee_image}}" alt="avatar" class="rounded-circle shadow avatar">
     <br>
     <span class="d-none d-md-inline ms-2 text-nowrap">{{assignee_first_name}} {{assignee_last_name}}</span>
   </td>
-  <td class="align-middle" aria-label="TaskDetails">
+  <td class="align-middle task-detail" aria-labelledby="taskDetail">
     <div>
       <a href="{{DetailView}}" class="text-decoration-none fw-bold task-detail-ref">{{summary}}</a>
     </div>
     <p class="d-none d-lg-block fst-italic text-muted">{{description}}</p>
   </td>
-  <td class="align-middle" aria-label="TaskActions">
+  <td class="align-middle task-actions" aria-labelledby="taskActions">
     <div class="d-flex flex-row justify-content-between align-items-center">
       {{#if completed}}
         <i class="bi bi-arrow-repeat{{#unless can_edit}} disabled{{/unless}}" role="button"

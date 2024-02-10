@@ -16,7 +16,11 @@
               <li class="nav-item"><a href="{{FormView}}" class="nav-link">Create new</a></li>
               <li class="nav-item"><a href="{{ProfileView}}" class="nav-link">Profile</a></li>
             {{/unless}}
-            <li class="nav-item"><a href="{{SignOutView}}" class="nav-link">Sign Out</a></li>
+            <li class="nav-item">
+              <form>
+                <input type="submit" class="nav-link" value="Sign Out">
+              </form>
+            </li>
           {{else}}
             <li class="nav-item"><a href="{{SignUpView}}" class="nav-link">Sign Up</a></li>
             <li class="nav-item"><a href="{{SignInView}}" class="nav-link">Sign In</a></li>

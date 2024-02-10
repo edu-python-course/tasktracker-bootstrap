@@ -14,9 +14,28 @@
 <body>
 {{>partials/_navbar is_authenticated=true}}
 <div class="container">
-  <div class="row justify-content-center">
-    {{>partials/list_main}}
+  <div class="row row-cols-1 justify-content-center">
+    <main class="col col-md-10 col-lg-9">
+      {{>partials/list_main}}
+    </main>
   </div>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  {{>partials/_toast
+      message="The sea-dog trades with yellow fever, scrape the pacific ocean until it falls."
+  }}
+  {{>partials/_toast
+      message="The grog pulls with amnesty, rob the lighthouse until it stutters."
+      category="error"
+  }}
+  {{>partials/_toast
+      message="The parrot robs with desolation, crush the bahamas until it screams."
+      category="warning"
+  }}
+  {{>partials/_toast
+      message="Booty, passion, and madness. The lass robs with faith, break the pacific ocean until it rises."
+      category="success"
+  }}
 </div>
 </body>
 </html>

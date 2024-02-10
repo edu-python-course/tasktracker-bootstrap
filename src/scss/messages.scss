@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
+.error {
+  @extend .text-bg-danger;
+}
+
+.warning {
+  @extend .text-bg-warning;
+}
+
+.success {
+  @extend .text-bg-success;
+}
