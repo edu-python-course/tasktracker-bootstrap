@@ -51,7 +51,7 @@ const swapTaskPatchButton = ({element, completed}) => {
 document.body.addEventListener("htmx:afterOnLoad", (event) => {
     const xhr = event.detail.xhr
     if (xhr.status < 200 || xhr.status > 299) {
-        messages.show("Something went wrong")
+        messages.show("Something went wrong", "error")
         return
     }
 

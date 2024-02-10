@@ -1,6 +1,6 @@
-const createMessageElement = (background = "", message) => {
+const createMessageElement = (message, messageClass = "") => {
     const container = document.createElement("div")
-    container.classList.add("toast", "align-items-center", background)
+    container.classList.add("toast", "align-items-center", messageClass)
     const wrapper = document.createElement("div")
     wrapper.classList.add("d-flex")
     const body = document.createElement("div")
@@ -14,9 +14,9 @@ const createMessageElement = (background = "", message) => {
 }
 
 
-export const show = (message) => {
+export const show = (message, category = "") => {
     const container = document.querySelector(".toast-container")
-    let toast = createMessageElement("text-bg-danger", message)
+    let toast = createMessageElement(message, category)
     container.appendChild(toast)
     toast = bootstrap.Toast.getOrCreateInstance(toast, {"delay": 5000})
     toast.show()

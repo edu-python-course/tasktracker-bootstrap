@@ -16,6 +16,7 @@ import * as htmx from "htmx.org"
 import "./scss/auth.scss"
 import "./scss/detail.scss"
 import "./scss/list.scss"
+import "./scss/messages.scss"
 import "./scss/profile.scss"
 
 import * as messages from "./js/messages"
