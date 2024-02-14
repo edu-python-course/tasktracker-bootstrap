@@ -20,6 +20,7 @@ import "./scss/messages.scss"
 import "./scss/profile.scss"
 
 import * as messages from "./js/messages"
+import * as cookies from "./js/cookies"
 import "./js/tasks"
 
 import "./img/favicon.png"
@@ -28,3 +29,4 @@ import "./img/favicon.svg"
 // make global visible
 window.bootstrap = bootstrap
 window.messages = messages
+window.getCookieValue = cookies.getCookieValue
