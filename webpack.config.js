@@ -14,12 +14,17 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
 const api = require("./api/settings")
 
+const templateParameters = {
+    favicon_png: "../assets/img/favicon.png",
+    favicon_svg: "../assets/img/favicon.svg",
+}
+
 // webpack config object
 // noinspection WebpackConfigHighlighting,HttpUrlsUsage
 module.exports = {
     mode: "development",
     output: {
-        filename: "js/main.bundle.js",
+        filename: "assets/js/main.bundle.js",
         path: path.resolve(__dirname, "dist"),
         clean: true
     },
@@ -35,46 +40,52 @@ module.exports = {
         }
     },
     plugins: [
-        new MiniCSSExtractPlugin({filename: "css/main.min.css"}),
+        new MiniCSSExtractPlugin({filename: "assets/css/main.min.css"}),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/list_view.hbs"),
-            filename: "tasks/task_list.html",
+            filename: "templates/task_list.html",
             templateParameters: {
+                ...templateParameters,
                 title: "Tasks List",
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/detail_view.hbs"),
-            filename: "tasks/task_detail.html",
+            filename: "templates/task_detail.html",
             templateParameters: {
+                ...templateParameters,
                 title: "Tasks Details",
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/form_view.hbs"),
-            filename: "tasks/task_form.html",
+            filename: "templates/task_form.html",
             templateParameters: {
+                ...templateParameters,
                 title: "Task Form",
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/profile_view.hbs"),
-            filename: "users/profile.html",
+            filename: "templates/profile.html",
             templateParameters: {
+                ...templateParameters,
                 title: "User Profile",
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/signup_view.hbs"),
-            filename: "auth/signup.html",
+            filename: "templates/signup.html",
             templateParameters: {
+                ...templateParameters,
                 title: "Sign Up",
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/signin_view.hbs"),
-            filename: "auth/signin.html",
+            filename: "templates/signin.html",
             templateParameters: {
+                ...templateParameters,
                 title: "Sign In",
             }
         }),
@@ -101,14 +112,14 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
                 generator: {
-                    filename: "img/[name][ext]"
+                    filename: "assets/img/[name][ext]"
                 }
             },
             {
                 test: /\.(woff|woff2|ttf|eot)$/,
                 type: "asset/resource",
                 generator: {
-                    filename: "fonts/[name][ext][query]"
+                    filename: "assets/fonts/[name][ext][query]"
                 }
             },
             {
@@ -116,7 +127,7 @@ module.exports = {
                 scheme: "data",
                 type: "asset/resource",
                 generator: {
-                    filename: "icons/[hash].svg"
+                    filename: "assets/icons/[hash].svg"
                 }
             },
             {
